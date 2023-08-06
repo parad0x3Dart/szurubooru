@@ -88,15 +88,18 @@ ENV THREADS=${THREADS}
 
 VOLUME ["/data/"]
 
+HEALTHCHECK --interval=10m --timeout=3m --start-period=5m --start-interval=5s --retries=3 \
+    CMD [ "wget", "-qO", "/dev/null", "--header", "Accept: application/json", "http://localhost:6666/info" ]
+
 ARG DOCKER_REPO
 ARG BUILD_DATE
 ARG SOURCE_COMMIT
 LABEL \
     maintainer="" \
     org.opencontainers.image.title="${DOCKER_REPO}" \
-    org.opencontainers.image.url="https://github.com/rr-/szurubooru" \
-    org.opencontainers.image.documentation="https://github.com/rr-/szurubooru/blob/${SOURCE_COMMIT}/doc/INSTALL.md" \
+    org.opencontainers.image.url="https://github.com/parad0x3Dart/szurubooru" \
+    org.opencontainers.image.documentation="https://github.com/parad0x3Dart/szurubooru/blob/${SOURCE_COMMIT}/doc/INSTALL.md" \
     org.opencontainers.image.created="${BUILD_DATE}" \
-    org.opencontainers.image.source="https://github.com/rr-/szurubooru" \
+    org.opencontainers.image.source="https://github.com/parad0x3Dart/szurubooru" \
     org.opencontainers.image.revision="${SOURCE_COMMIT}" \
     org.opencontainers.image.licenses="GPL-3.0"
