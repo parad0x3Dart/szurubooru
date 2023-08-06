@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+alembic = "*"
+certifi = "*"
+coloredlogs = "==5.0"
+heif-image-plugin = "*"
+numpy = "*"
+pillow = "*"
+pillow-avif-plugin = "*"
+psycopg2-binary = "*"
+pyheif = "*"
+pynacl = "*"
+pyrfc3339 = "*"
+pytz = "*"
+pyyaml = ">=3.12"
+sqlalchemy = "<1.4,>=1.0.12"
+youtube-dl = "*"
+
+[dev-packages]
+black = "*"
+flake8 = "*"
+freezegun = "*"
+pycodestyle = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-pgsql = "*"

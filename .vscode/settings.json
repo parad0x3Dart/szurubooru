@@ -1,0 +1,14 @@
+{
+    "[python]": {
+        "editor.formatOnSave": true
+    },
+    "python.formatting.blackPath": "${workspaceFolder}/server/.venv/bin/black",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "-l79"
+    ],
+    "isort.check": true,
+    "isort.importStrategy": "fromEnvironment",
+    "python.terminal.activateEnvironment": false,
+    "python.defaultInterpreterPath": "${workspaceFolder}/server/.venv/bin/python"
+}
