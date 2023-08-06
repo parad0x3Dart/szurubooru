@@ -39,7 +39,8 @@
         <% } %>
 
         <section class='zoom'>
-            <a href class='fit-original'>Original zoom</a> &middot;
+            <i class='fa fa-magnifying-glass'></i>
+            <a href class='fit-original'>original</a> &middot;
             <a href class='fit-width'>fit width</a> &middot;
             <a href class='fit-height'>height</a> &middot;
             <a href class='fit-both'>both</a>
@@ -47,7 +48,8 @@
 
         <% if (ctx.post.source) { %>
             <section class='source'>
-                Source: <% for (let i = 0; i < ctx.post.sourceSplit.length; i++) { %>
+                <i class='fa fa-book'></i>
+                <% for (let i = 0; i < ctx.post.sourceSplit.length; i++) { %>
                     <% if (i != 0) { %>&middot;<% } %>
                     <a href='<%- ctx.post.sourceSplit[i] %>' title='<%- ctx.post.sourceSplit[i] %>'><%- ctx.extractRootDomain(ctx.post.sourceSplit[i]) %></a>
                 <% } %>
@@ -55,10 +57,11 @@
         <% } %>
 
         <section class='search'>
-            Search on
+            <i class='fa fa-globe'></i>
+            <a href='https://rule34.xxx/index.php?page=post&s=list&tags=md5:<%- ctx.post.checksumMD5 %>'>rule34</a> &middot;
+            <a href='https://saucenao.com/search.php?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>SauceNao</a> &middot;
             <a href='http://iqdb.org/?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>IQDB</a> &middot;
-            <a href='https://danbooru.donmai.us/posts?tags=md5:<%- ctx.post.checksumMD5 %>'>Danbooru</a> &middot;
-            <a href='https://www.google.com/searchbyimage?&image_url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>Google Images</a>
+            <a href='https://www.tineye.com/search/?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>TinEye</a>
         </section>
 
         <section class='social'>
