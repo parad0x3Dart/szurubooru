@@ -39,7 +39,7 @@
         <% } %>
 
         <section class='zoom'>
-            <i class='fa fa-magnifying-glass'></i>
+            <i class='fa fa-search'></i>
             <a href class='fit-original'>original</a> &middot;
             <a href class='fit-width'>fit width</a> &middot;
             <a href class='fit-height'>height</a> &middot;
@@ -58,9 +58,9 @@
 
         <section class='search'>
             <i class='fa fa-globe'></i>
-            <a href='https://rule34.xxx/index.php?page=post&s=list&tags=md5:<%- ctx.post.checksumMD5 %>'>rule34</a> &middot;
+            <a href='https://rule34.xxx/index.php?page=post&s=list&tags=md5:<%- ctx.post.checksumMD5 %>'>Rule34</a> &middot;
             <a href='https://saucenao.com/search.php?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>SauceNao</a> &middot;
-            <a href='http://iqdb.org/?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>IQDB</a> &middot;
+            <a href='https://iqdb.org/?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>IQDB</a> &middot;
             <a href='https://www.tineye.com/search/?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>TinEye</a>
         </section>
 
