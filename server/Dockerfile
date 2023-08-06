@@ -88,7 +88,7 @@ ENV THREADS=${THREADS}
 
 VOLUME ["/data/"]
 
-HEALTHCHECK --interval=10m --timeout=3m --start-period=5m --start-interval=5s --retries=3 \
+HEALTHCHECK --interval=1m --timeout=3m --start-period=10m --retries=3 \
     CMD [ "wget", "-qO", "/dev/null", "--header", "Accept: application/json", "http://localhost:6666/info" ]
 
 ARG DOCKER_REPO
