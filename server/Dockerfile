@@ -89,7 +89,7 @@ ENV THREADS=${THREADS}
 VOLUME ["/data/"]
 
 HEALTHCHECK --interval=1m --timeout=3m --start-period=10m --retries=3 \
-    CMD [ "wget", "-qO", "/dev/null", "--header", "Accept: application/json", "http://localhost:6666/info" ]
+    CMD [ "wget", "-qO", "/dev/null", "--header", "Accept: application/json", "http://127.0.0.1:6666/info" ]
 
 ARG DOCKER_REPO
 ARG BUILD_DATE
