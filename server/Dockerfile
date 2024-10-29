@@ -69,6 +69,7 @@ ARG PGID=1000
 
 RUN apk --no-cache add \
         dumb-init \
+        su-exec \
         py3-setuptools \
         py3-waitress \
  && mkdir -p /opt/app /data \
@@ -76,7 +77,6 @@ RUN apk --no-cache add \
  && adduser -SDH -h /opt/app -g '' -G app -u ${PUID} app \
  && chown -R app:app /opt/app /data
 
-USER app
 CMD ["/opt/app/docker-start.sh"]
 
 ARG PORT=6666
