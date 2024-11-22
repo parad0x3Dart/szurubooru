@@ -61,7 +61,7 @@
             <a href='https://rule34.xxx/index.php?page=post&s=list&tags=md5:<%- ctx.post.checksumMD5 %>'>Rule34</a> &middot;
             <a href='https://saucenao.com/search.php?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>SauceNao</a> &middot;
             <a href='https://iqdb.org/?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>IQDB</a> &middot;
-            <a href='https://www.tineye.com/search/?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>TinEye</a>
+            <a href='https://lens.google.com/uploadbyurl?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>Google Images</a>
         </section>
 
         <section class='social'>
